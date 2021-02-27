@@ -34,17 +34,6 @@ h2{
   text-align: center;
 }
 
-.grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.gridItem{
-  text-align: center;
-}
-
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -230,6 +219,38 @@ button[disabled] {
 
 .slider .range div:nth-child(2){
   right: 1px;
+}
+
+@media (min-width: 1px) {
+  .grid{
+    display: block;
+  }
+
+  .gridItem{
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 400px) {
+  .gridItem{
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 736px) {
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .gridItem{
+    margin-bottom: 0;
+    text-align: center;
+  }
 }
 
 @media (max-width: 690px) {
